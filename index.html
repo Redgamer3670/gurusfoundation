@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>The Gurus Foundation</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: sans-serif;
@@ -13,13 +17,14 @@
 
     .navbar {
       background: white;
-      padding: 10px 0;
-      border-radius: 0 0 15px 15px;
+      padding: 15px 0;
+      border-radius: 0 0 20px 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       display: flex;
       justify-content: center;
       gap: 60px;
-      font-size: 22px;
+      font-size: 26px;
+      flex-wrap: wrap;
     }
 
     .navbar a {
@@ -28,67 +33,91 @@
       color: black;
     }
 
-    .navbar a:nth-child(1) {
-      color: orange;
-    }
-
+    .navbar a:nth-child(1),
     .navbar a:nth-child(2) {
       color: orange;
     }
 
     .title {
-      font-size: 60px;
+      font-size: 70px;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .title span {
       background: black;
       color: white;
-      padding: 0 10px;
-      border-radius: 8px;
+      padding: 0 12px;
+      border-radius: 10px;
     }
 
     .subtitle {
       font-family: 'Comic Sans MS', cursive;
-      font-size: 35px;
+      font-size: 40px;
       font-weight: bold;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       letter-spacing: 2px;
     }
 
     .tiers {
       display: flex;
       justify-content: center;
-      gap: 50px;
-      margin-bottom: 60px;
+      gap: 40px;
+      margin: 0 auto 80px;
+      flex-wrap: wrap;
+      max-width: 1000px;
     }
 
     .tier {
       text-align: center;
+      margin-bottom: 30px;
     }
 
     .tier img {
-      width: 200px;
-      height: 200px;
+      width: 260px;
+      height: 260px;
       object-fit: cover;
-      border: 3px solid white;
-      border-radius: 4px;
+      border: 4px solid white;
+      border-radius: 6px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .tier.middle img {
-      border: 3px solid orange;
+      border: 4px solid orange;
     }
 
     .price {
-      margin-top: 10px;
-      font-size: 20px;
+      margin-top: 12px;
+      font-size: 24px;
       color: gray;
     }
 
     .middle .price {
       color: orange;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 50px;
+      }
+
+      .subtitle {
+        font-size: 32px;
+      }
+
+      .navbar {
+        font-size: 20px;
+        gap: 30px;
+      }
+
+      .tier img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .price {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
