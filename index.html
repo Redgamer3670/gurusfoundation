@@ -4,25 +4,119 @@
   <meta charset="UTF-8">
   <title>The Gurus Foundation</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background: black;
-      height: 100%;
-      overflow: hidden;
+      font-family: sans-serif;
+      background: linear-gradient(to bottom, #f3f0ea, #e7e2db);
+      text-align: center;
     }
-    img {
-      display: block;
-      width: 100vw;
-      height: 100vh;
+
+    .navbar {
+      background: white;
+      padding: 10px 0;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-size: 22px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-family: monospace;
+      color: black;
+    }
+
+    .navbar a:nth-child(1) {
+      color: orange;
+    }
+
+    .navbar a:nth-child(2) {
+      color: orange;
+    }
+
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .title span {
+      background: black;
+      color: white;
+      padding: 0 10px;
+      border-radius: 8px;
+    }
+
+    .subtitle {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .tiers {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .tier {
+      text-align: center;
+    }
+
+    .tier img {
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      user-select: none;
-      -webkit-user-drag: none;
-      pointer-events: none;
+      border: 3px solid white;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .tier.middle img {
+      border: 3px solid orange;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-size: 20px;
+      color: gray;
+    }
+
+    .middle .price {
+      color: orange;
     }
   </style>
 </head>
 <body>
-  <img src="guru.png" alt="">
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Prices</a>
+  </div>
+
+  <div class="title">The <span>Gurus</span> Foundation</div>
+  <div class="subtitle">DONTAIONS</div>
+
+  <div class="tiers">
+    <div class="tier">
+      <img src="longdog.png" alt="">
+      <div class="price">$1 per month</div>
+    </div>
+    <div class="tier middle">
+      <img src="gurus.png" alt="">
+      <div class="price">$5 per month</div>
+    </div>
+    <div class="tier">
+      <img src="cat.png" alt="">
+      <div class="price">$2.50 per month</div>
+    </div>
+  </div>
+
 </body>
 </html>
